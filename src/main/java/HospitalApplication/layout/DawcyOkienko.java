@@ -137,7 +137,14 @@ public class DawcyOkienko extends JFrame{
             public String getColumnName(int index) {
                 return columnNames[index];
             }
+
+            @Override
+            public boolean isCellEditable(int row, int column){
+                return false;
+            }
+
         });
+
 
         lSelectionListener = new ListSelectionListener(){
             public void valueChanged(ListSelectionEvent event) {
@@ -294,6 +301,8 @@ public class DawcyOkienko extends JFrame{
                             }
 
                             daService.updateDawca(dawca);
+
+                            table.getSelectionModel();
                             popup.dispose();
                         }
                     });
@@ -402,6 +411,11 @@ public class DawcyOkienko extends JFrame{
                     @Override
                     public String getColumnName(int index) {
                         return columnNames[index];
+                    }
+
+                    @Override
+                    public boolean isCellEditable(int row, int column){
+                        return false;
                     }
                 });
             }
@@ -517,6 +531,11 @@ public class DawcyOkienko extends JFrame{
                     @Override
                     public String getColumnName(int index) {
                         return columnNames[index];
+                    }
+
+                    @Override
+                    public boolean isCellEditable(int row, int column){
+                        return false;
                     }
                 });
                 table.getSelectionModel().addListSelectionListener(lSelectionListener);

@@ -11,6 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
@@ -20,6 +21,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Comparator;
@@ -433,13 +435,13 @@ public class DawcyOkienko extends JFrame{
         JToolBar toolBar = new JToolBar();
         toolBar.setFloatable(false);
         JButton testBtn1 = new JButton();
-        //try {
-        //    Image img = ImageIO.read(getClass().getResource("settings_icon.png"));
-        //    testBtn1.setIcon(new ImageIcon(img));
+        /*try {
+            Image img = ImageIO.read(getClass().getResource("settings_icon.png"));
+            testBtn1.setIcon(new ImageIcon(img));
             testBtn1.setBorder(buttonBorder);
-       // } catch (IOException ex) {
-        //    System.out.println(ex);
-        //}
+             } catch (IOException ex) {
+            System.out.println(ex);
+        }*/
         
         JLabel szukajkaLabel = new JLabel("ICD10: ");
         JFrame szukajkaFrame = new JFrame();

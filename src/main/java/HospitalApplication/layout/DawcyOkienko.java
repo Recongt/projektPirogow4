@@ -144,7 +144,6 @@ public class DawcyOkienko extends JFrame{
             public boolean isCellEditable(int row, int column){
                 return false;
             }
-
         });
 
 
